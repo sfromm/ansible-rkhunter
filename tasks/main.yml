@@ -1,0 +1,8 @@
+---
+# tasks file for rkhunter
+- include: setup-redhat.yml
+  when: ansible_os_family == "RedHat"
+
+- name: template rkhunter.conf
+  template: src=rkhunter.conf.j2 dest=/etc/rkhunter.conf mode=0640
+  notify: rkhunter update

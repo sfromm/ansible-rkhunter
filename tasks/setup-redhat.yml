@@ -1,0 +1,7 @@
+---
+- name: install rkhunter
+  yum: name=rkhunter state=present
+  notify: rkhunter update
+
+- name: deploy rkhunter sysconfig
+  template: src=rkhunter.sysconfig.j2 dest=/etc/sysconfig/rkhunter mode=0640

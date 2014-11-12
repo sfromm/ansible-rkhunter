@@ -1,0 +1,5 @@
+---
+# defaults file for rkhunter
+rkhunter_mail: root@localhost
+rkhunter_diag_scan: no
+rkhunter_ssh_prot: 2
